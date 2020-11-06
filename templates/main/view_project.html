@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="pt-5 container">
+
+    <!-- <form action="{% url 'create' %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">Save</button>
+    </form> -->
+  
+      <form class="form-group pt-5" action="#" method="post">
+    
+        {% csrf_token %}
+          <label for="name"> اسم المشروع </label>
+          <input class="form-control form-control-lg" type="text" value="{{project.name}}"  name="name" >
+  
+          <label for="department"> اسم القطاع </label>
+          <input class="form-control form-control-lg" type="text" value="{{project.department}}"  name="department">
+  
+          <label for="price"> قيمة المشروع </label>
+          <input class="form-control form-control-lg" type="number" value="{{project.price}}"  name="price">
+  
+          <label for="consultant"> استشاري المشروع </label>
+          <input class="form-control form-control-lg" type="text" value="{{project.consultant}}"  name="consultant">
+  
+          <label for="owner"> الجهه المالكة </label>
+          <input class="form-control form-control-lg" type="text" value="{{project.owner}}"  name="owner">
+  
+          <label for="start_date"> تاريخ بدء المشروع </label>
+          <input class="form-control form-control-lg" type="date" value="{{project.start_date}}"  name="start_date">
+  
+          <label for="end_date"> تاريخ نهو المشروع </label>
+          <input class="form-control form-control-lg" type="date" value="{{project.end_date}}"  name="end_date">
+  
+          <button class="btn btn-md btn-primary" type="submit">Save</button>
+  
+          
+      </form>
+    </div>
+
+
+
+    {% endblock %}

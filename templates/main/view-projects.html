@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+  <div class="row">
+  {% for project in projects %}
+    <div class="col-6">
+      <div class="card align-center" style="width: 25rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> {{project.name}} </li>
+            <li class="list-group-item">{{project.department}}</li>
+            <li class="list-group-item">{{project.price}}</li>
+            <li class="list-group-item">{{project.consultant}}</li>
+            <li class="list-group-item">{{project.owner}}</li>
+            <li class="list-group-item">{{project.start_date}}</li>
+            <li class="list-group-item">{{project.end_date}}</li>
+            <li class="list-group-item"> <a class="btn btn-md btn-info" href="#">  View </a> </li>
+            <li class="list-group-item"> <a class="btn btn-md btn-secondary" href="#">  Edit </a> </li>
+            
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
